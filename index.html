@@ -1,11 +1,17 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title> A carousel enabling mouseIn mouseOut zoomIn animation</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
  
  <link href="./stylesheets/insureon.css" media="all" rel="stylesheet" type="text/css"/><style>
+ <link href="./stylesheets/animate.css" media="all" rel="stylesheet" type="text/css"/>
+ 
+  <link href='http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+ <style>
 body {
    font-size:14px;
    color:#333;
@@ -32,6 +38,11 @@ div.envelop {
 			  width:350px;
 			  margin:50px 0 0 0;
 			  background-color: #fff; }
+  .h2_double_size {
+  font-stretch: ultra-condensed;
+  letter-spacing:-2px;
+  word-spacing:-2px;
+  }
 .p {  padding-top: 125px;
 	  text-align: center;
 	  color:#333;}
@@ -90,9 +101,12 @@ div.envelop {
 					  top: 10px;
 					  margin:auto;
 					  max-width: 210px;
-					  text-align: left;
-					  float:left;}
-#slides {overflow:visible;
+					 /* text-align: left;*/
+					  float:left;
+					  border:1px solid yellow;
+					  }
+#slides {
+        overflow:visible;
 		/* fix ie overflow issue */
 		position:relative;
 		width:1002px;
@@ -121,6 +135,7 @@ div.envelop {
 	/*float:left;*/
 	margin-right:20px;
 	/*padding-right:20px;*/
+	border:0.5px solid black;
 	}
 #slides li>div.img_wrapper {
     top:0px;
@@ -136,8 +151,9 @@ div.envelop {
 	}
 
 #slides li img {
-	/*padding:4px;
-	border:1px solid #c0c0c0;*/
+	/*padding:4px;*/
+	border:1px solid #c0c0c0;
+	border:1px solid red;
 }
 
 
@@ -327,7 +343,7 @@ function rotate() {
 <body id="myBody"><!-- Carousel under this line paste-->
 
 <div class="container-fluid bg-3 text-center">
-  <h2 id="visitors" class="bottom_margin splendid h2_double_size" style="font-family: 'open sans',arial,sans-serif;font-weight:200;">
+  <h2 id="visitors" class="bottom_margin splendid h2_double_size" style="">
   What our customers are saying? Point with cursor to enlarge. </h2>
    <div class="row">
     <div id="carousel">
@@ -339,32 +355,18 @@ function rotate() {
 	   <div class="clear"></div>
 <div id="slides"> 
 <ul class="slides">
-	<li><div class="img_wrapper"><img class="0" src="images/slide1.png" style="width:100%; height:auto;" alt="0"/><div class="text">
-	The materials available at this web site are for informational purposes only and not for the purpose
-	of providing legal advice. You should contact a licensed insurance agent or attorney to obtain advice
-	with respect to any particular issue or problem.The opinions expressed at or through this</div>
-	</div></li>
-	<li><div class="img_wrapper"><img class="1" src="images/slide2.png" style="width:100%; height:auto;" alt="1"/><div class="text">
-	The materials available at this web site are for informational purposes only and not for the purpose
-	of providing legal advice. You should contact a licensed insurance agent or attorney to obtain advice
-	with respect to any particular issue or problem.The opinions expressed at or through this</div></div></li>
-	<li><div class="img_wrapper"><img class="2"  src="images/slide3.png" style="width:100%; height:auto;" alt="2"/><div class="text">
-	Use of and access to this Web site or any of the e-mail links contained within the site do not create
-	a relationship between Insureon and the user or browser. The opinions expressed at or through this
-	site are the opinions of the individual author and may not reflect the opinions of the firm </div></div></li>
-	<li><div class="img_wrapper"><img class="3"  src="images/slide4.png" style="width:100%; height:auto;" alt="3"/><div class="text">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut nisi eu tortor viverra posuere.
-	site are the opinions of the individual author and may not reflect the opinions of the firm  Nunc ac hendrerit ligula.The opinions expressed at or through this
-	site are the opinions of the individual author and may not reflect the opinions of the firm  </div></div></li>
-	<li><div class="img_wrapper"><img class="4"  src="images/slide5.png" style="width:100%; height:auto;" alt="4"/><div class="text">
-	Answer a few questions & we'll find you quotes from the nation's best insurers The opinions expressed at or through this
-	site are the opinions of the individual author and may not reflect the opinions of the firm The opinions expressed at or through this
-	site are the opinions of the individual author and may not reflect the opinions of the firm </div></div></li>
-	<li><div class="img_wrapper"><img class="5"  src="images/slide6.png" style="width:100%; height:auto;" alt="5"/><div class="text">
-	free guidance every step of the way, The opinions expressed at or through this
-	site are the opinions of the individual author and may not reflect the opinions of the firm The opinions expressed at or through this
-	site are the opinions of the individual author and ma of the firm  from helping you choose your first policy to adding critical 
-	coverage  </div></div></li>
+	<li class="slides-0"><img class="0" src="images/slide1.png" style="width:100%; height:auto;" alt="0"/><div class="text">0The materials available at this web site are for informational purposes only and not for the purpose of providing legal advice. You should contact a licensed insurance agent or attorney to obtain advice with respect to any particular issue or problem.The opinions expressed at or through this</div>
+	</li>
+	<li class="slides-1"><img class="1" src="images/slide2.png" style="width:100%; height:auto;" alt="1"/><div class="text">1You should contact a licensed insurance agent  are for informational purposes only and not for the purpose	of providing legal advice. You should contact a licensed insurance agent or attorney to obtain advice with respect to any particular issue or problem.The opinions expressed at or through this</div>
+	</li>
+	<li class="slides-2"><img class="2"  src="images/slide3.png" style="width:100%; height:auto;" alt="2"/><div class="text">2You should contact a licensed insurance agent  are for informational purposes only and not for the purpose of providing legal advice. You should contact a licensed insurance agent or attorney to obtain advice with respect to any particular issue or problem.The opinions expressed at or through this </div>
+	</li>
+	<li class="slides-3"><img class="3"  src="images/slide4.png" style="width:100%; height:auto;" alt="3"/><div class="text">3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut nisi eu tortor viverra posuere.ite are the opinions of the individual author and may not reflect the opinions of the firm  Nunc ac hendrerit ligula.The opinions expressed at or through this site are the opinions of the individual author and may not reflect the opinions of the firm </div>
+	</li>
+	<li class="slides-4"><img class="4"  src="images/slide5.png" style="width:100%; height:auto;" alt="4"/><div class="text">4Answer a few questions & we'll find you quotes from the nation's best insurers The opinions expressed at or through this site are the opinions of the individual author and may not reflect the opinions of the firm The opinions expressed at or through this site are the opinions of the individual author and may not reflect the opinions of the firm </div>
+	</li>
+	<li class="slides-5"><img class="5"  src="images/slide6.png" style="width:100%; height:auto;" alt="5"/><div class="text">5free guidance every step of the way, The opinions expressed at or through this site are the opinions of the individual author and may not reflect the opinions of the firm The opinions expressed at or through this site are the opinions of the individual author and ma of the firm  from helping you choose your first policy to adding critical coverage  </div>
+	</li>
 </ul>
 <div class="clear"></div>
 </div>
@@ -373,61 +375,63 @@ function rotate() {
 </div><br><br>
 <!-- #################  Media Card - Triple   #################  -->
 <script>
-const liDiv = document.querySelectorAll("li>div");
-const plen =  liDiv.length;
-console.log(plen);
-for(let i=0;i<plen;i++) {
-liDiv[i].addEventListener("mouseover", function(e) {
- // e.preventDefault();
- const img_wrapper = this.innerHTML;
-  const liAlt = parseInt(e.target.alt);
-  const liClass = e.target.className;
-  const curLi = document.getElementsByTagName("LI")[liAlt];
-  //console.log(" Li Alt = " + liAlt);
-  console.log(" Mouseenter Li Class = " + liClass);
-  console.log("X = " + this.offsetLeft + ";" + "Y = " + this.offsetTop);
-  const etarget= e.target;
-  if (etarget.tagName === 'IMG') {
-  //  console.log(etarget.parentNode.tagName);
-    const myElement = document.createElement('div');
-    myElement.className = 'preview';
-	//myElement.style.left = (liAlt+1)*274 + "px";
-   // myElement.style.left = e.offsetX + 'px';
-    myElement.style.left = this.offsetLeft + 'px';
-  // myElement.style.top = e.offsetY + 'px';
-    myElement.style.top = this.offsetTop + 'px';
-   // target.parentNode.appendChild(myElement);
-    myElement.innerHTML = img_wrapper;
-    curLi.appendChild(myElement);
-    const myImg = document.createElement('img');
-  //  var imgLoc = e.target.src;
-    const imgLoc = etarget.src;
-//	console.log(imgLoc);
-    myImg.src = imgLoc;
-/*
-    myElement.style.left = e.offsetX + 15 + 'px';
-    myElement.style.top = e.offsetY + 15 + 'px';
-*/
-   // myElement.appendChild(myImg);
+let imgLoc,targEle;
+const ulNode = document.querySelector("#slides ul.slides");
+   ulNode.addEventListener("mouseover", function(e) {
+    // e.preventDefault();
+	console.log("=====================start mouseover event=============");
+     const etarget= e.target;
+  if (etarget.tagName === 'IMG'||etarget.className === 'text') {
+  let targEle = (etarget.tagName === 'IMG') ? 'IMG' : 'DIV -'+ etarget.className;
+  console.log("Target Element = " + targEle);
+    const myElement = document.createElement('div');	
+     myElement.className = 'preview';
+	  etarget.parentNode.appendChild(myElement);
+	  // console.log("etarget.parentNode = " + etarget.parentNode.tagName);//LI
+	   // console.log("etarget.parentNode = " + etarget.parentNode.className);//mesela slide-3?
+         // console.log(etarget.parentNode.innerHTML)
+	      // console.log(etarget.parentNode.tagName);	 
+  let liImgAlt = parseInt(e.target.alt);
+   let liImgClass = e.target.parentNode.className;
+   if(liImgClass.includes('slides')){
+		//console.log("ALT NO = ", liImgAlt);
+		 const curLi = ulNode.getElementsByClassName(etarget.parentNode.className)[0];
+		 let imgLoc = (targEle === "IMG")? e.target.src : etarget.parentNode.firstElementChild.src;
+		 let myImg = document.createElement("img");
+		  
+		  console.log("IMGLOC = " + imgLoc)
+		   myImg.src = imgLoc.slice(39);
+		   myElement.appendChild(myImg);
+	   
+		  const textDiv = document.createElement("div");
+		  let str = curLi.children[1].innerHTML;
+			//console.log(str);
+			  textDiv.className = 'text';
+			  textDiv.innerText=  str;
+			   myElement.appendChild(textDiv); 
+			   myElement.style.left = curLi.offsetLeft + 'px';
+		  // myElement.style.top = e.offsetY + 'px';
+			myElement.style.top = curLi.offsetTop + 'px';
+			}
 /*---------------------------------------------
                     Animation
 -----------------------------------------------*/	
 	
 myElement.classList.remove("bwards");
 myElement.classList.add("highlight");
-myElement.addEventListener("mouseleave", function(d) {
-console.log("mouseleave etarget - tag = " + d.target.tagName);
-console.log("mouseleave etarget - class = " + d.target.className);
+myElement.addEventListener("mouseout", function(d){
+//console.log("mouseout etarget - tag = " + d.target.tagName);
+//console.log("mouseout etarget - class = " + d.target.className);
  myElement.classList.remove("highlight");
  myElement.classList.add("bwards");
      myElement.addEventListener("animationend", function(f) {
 	 const target = f.target;
 	 target.remove();
      });//animationend
-    },false);//mouseleave	
+    },false);//mouseout	
    }; //if IMG
  },false);
-}//Mouseenter event
+//Mouseenter event
  
 </script>
   <p>Theme Made By <a href="http://www.quewebsite.com" title="Visit QueWebSite">www.quewebsite.com</a></p>
@@ -439,5 +443,3 @@ console.log("mouseleave etarget - class = " + d.target.className);
  </div><!-- wrapper -->
 </body>
 </html>
-
-  
